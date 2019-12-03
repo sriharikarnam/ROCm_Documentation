@@ -324,9 +324,9 @@ The following features are deprecated in the AMD ROCm v2.10 release.
 ROCm OpenCL Driver Compilation Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The AMD ROCm-OpenCL-Driver is now deprecated. Users should migrate to ROCm-CompilerSupport, which provides more comprehensive functionality. The compiler support repository provides various lightning compiler-related services. It currently contains a single library, the Code Object Manager (Comgr) at lib/comgr.
+The AMD ROCm-OpenCL-Driver Compilation Services is now deprecated. Users should migrate to ROCm-CompilerSupport, which provides more comprehensive functionality. The compiler support repository provides various lightning compiler-related services. It currently contains a single library, the Code Object Manager (Comgr) at lib/comgr.
 
-ROCm-OpenCL-Driver will no longer be actively maintained after the v2.10 release. If your application was developed with the ROCm-OpenCL-Driver, we would encourage you to switch to the ROCm-CompilerSupport repository.
+ROCm-OpenCL-Driver Compilation Services will no longer be actively maintained after the v2.10 release.  We would encourage you to switch to the ROCm-CompilerSupport repository.
 
 .. _Peer-to-Peer Bridge Driver for PeerDirect:
 
@@ -387,11 +387,9 @@ To install from a Debian Repository:
 
 ::
 
-    wget -q0 –
-     http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | 
+    wget -q0 –http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | 
 
-    sudo apt-key add -echo 'deb [arch=amd64] 
-    http://repo.radeon.com/rocm/apt/debian/ xenial main' | 
+    sudo apt-key add -echo 'deb [arch=amd64]  http://repo.radeon.com/rocm/apt/debian/ xenial main' | 
 
     sudo tee /etc/apt/sources.list.d/rocm.list
 
@@ -439,9 +437,11 @@ The current rocm.gpg.key is not available in a standard key ring distribution, b
 
 ::
 
-     echo 'ADD_EXTRA_GROUPS=1' | sudo tee -a /etc/adduser.conf
+     echo 'ADD_EXTRA_GROUPS=1' 
+     sudo tee -a /etc/adduser.conf
 
-     echo 'EXTRA_GROUPS=video' | sudo tee -a /etc/adduser.conf
+     echo 'EXTRA_GROUPS=video' 
+     sudo tee -a /etc/adduser.conf
 
 
 
